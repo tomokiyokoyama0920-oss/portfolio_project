@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>商品一覧</title>
+</head>
+<body>
+
+<h1>商品一覧</h1>
+<p th:if="${message}" th:text="${message}"></p>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>商品名</th>
+        <th>住所</th>
+        <th>価格</th>
+        <th>操作</th>
+    </tr>
+
+    <tr th:each="menu : ${menus}">
+        <td th:text="${menu.id}"></td>
+        <td th:text="${menu.menuname}"></td>
+        <td th:text="${menu.menuaddress}"></td>
+        <td th:text="${menu.price}"></td>
+        <td>
+            <a th:href="@{/menulist/{id}/edit(id=${menu.id})}">
+                <button type="button">編集</button>
+            </a>
+			<form th:action="@{/menulist/{id}/delete(id=${menu.id})}" method="post" style="display:inline;">
+			    <button type="submit">削除</button>
+			</form>
+        </td>
+    </tr>
+</table>

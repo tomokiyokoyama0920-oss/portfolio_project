@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <title>商品編集画面</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>商品の更新</h1>
+		<form th:action="@{/menulist/{id}/edit(id=${menu.id})}" th:object="${menu}" method="post">
+
+	      <input type="hidden" th:field="*{id}">
+
+	      <p>
+	          <label>商品名</label>
+	          <input type="text" th:field="*{menuname}" />
+	      </p>
+
+	      <p>
+	          <label>住所</label>
+	          <input type="text" th:field="*{menuaddress}" />
+	      </p>
+
+	      <p>
+	          <label>価格</label>
+	          <input type="text" th:field="*{price}" />
+	      </p>
+
+	      <p>
+	          <input class="button" type="submit" value="更新">
+	      </p>
+	  </form>
+      <div class="pull-right">
+        <a class="btn btn-link" href="/menulist">一覧画面へ</a>
+      </div>
+    </div>
+  </body>
+</html>
