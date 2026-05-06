@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class MenuService implements MenuInterface {
 	
+	
+	
 	@Autowired
      private MenuRepository3 menuRepository3;
 	
@@ -22,8 +24,6 @@ public class MenuService implements MenuInterface {
 	        return menuRepository3.findAll();
 	    }
 	 
-	
-	
 //menuRepository3の検索
 	 @Override
 	 public MenuForm findOne(Long id) {
