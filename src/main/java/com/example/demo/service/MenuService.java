@@ -13,8 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class MenuService implements MenuInterface {
 	
-	
-	
 	@Autowired
      private MenuRepository3 menuRepository3;
 	
