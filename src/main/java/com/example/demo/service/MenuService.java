@@ -12,16 +12,16 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("menuService")
 @Transactional
 public class MenuService implements MenuInterface {
-
+//Bの改行
 	@Autowired
 	private MenuRepository3 menuRepository3;
 
 //menuRepository3の処理
 	@Override
-	public List<MenuForm> findAll() {
-		return menuRepository3.findAll();
-	}
-//Aさんの修正
+	 public List<MenuForm> findAll() {
+	        return menuRepository3.findAll();
+	    }
+//Aさんの修正　Bの修正
 //menuRepository3の検索
 	@Override
 	public MenuForm findOne(Long id) {
