@@ -8,7 +8,7 @@ import com.example.demo.interfaces.MenuInterface;
 import com.example.demo.models.MenuForm;
 import com.example.demo.repositries.MenuRepository3;
 import org.springframework.transaction.annotation.Transactional;
-
+//featureBranchでの修正
 @Service("menuService")
 @Transactional
 public class MenuService implements MenuInterface {
