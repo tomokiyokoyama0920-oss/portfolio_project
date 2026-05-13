@@ -8,6 +8,7 @@ import com.example.demo.interfaces.MenuInterface;
 import com.example.demo.models.MenuForm;
 import com.example.demo.repositries.MenuRepository3;
 import org.springframework.transaction.annotation.Transactional;
+
 //featureBranchでの修正
 @Service("menuService")
 @Transactional
@@ -18,9 +19,10 @@ public class MenuService implements MenuInterface {
 
 //menuRepository3の処理
 	@Override
-	 public List<MenuForm> findAll() {
-	        return menuRepository3.findAll();
-	    }
+	public List<MenuForm> findAll() {
+		return menuRepository3.findAll();
+	}
+
 //Aさんの修正　Bの修正
 //menuRepository3の検索
 	@Override
@@ -33,9 +35,7 @@ public class MenuService implements MenuInterface {
 	@Override
 	public MenuForm save(MenuForm menu) {
 		return menuRepository3.save(menu);
-		
-		
-		
+
 	}
 
 //menuRepository3の削除
