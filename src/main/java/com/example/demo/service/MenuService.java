@@ -36,6 +36,7 @@ public class MenuService implements MenuInterface {
 	public MenuForm save(MenuForm menu) {
 		return menuRepository3.save(menu);
 
+		
 	}
 
 //menuRepository3の削除
